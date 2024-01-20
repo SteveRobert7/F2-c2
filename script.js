@@ -9,18 +9,32 @@ let arr = [
 
 function PrintDeveloper() {
   //Write your code here , just console.log
+  const developers = arr.filter(employee => employee.profession === 'developer');
+    console.log('Developers:', developers);
 }
 
 function addData() {
   //Write your code here, just console.log
+  const newEmployee = { id: 4, name: 'susan', age: 20, profession: 'intern' };
+    arr.push(newEmployee);
+    console.log('New employee added:', newEmployee);
 }
 
 function removeAdmin() {
   //Write your code here, just console.log
+  arr = arr.filter(employee => employee.profession !== 'admin');
+    console.log('Admin removed. Updated array:', arr);
 }
 
 function concatenateArray() {
   //Write your code here, just console.log
+   const newArray = [
+      { id: 5, name: 'josh', age: 28, profession: 'admin' },
+      { id: 6, name: 'ginu', age: 27, profession: 'tech support' },
+    ];
+  
+    arr = arr.concat(newArray);
+    console.log('Arrays concatenated. Updated array:', arr);
 }
 
 // Here is an example of how functions work,
